@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carolina Herrera</title>
     <link rel="stylesheet" href="public/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rancho&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/0d359cebd2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="/"><img src="public/images/cloud-logo.svg" alt="" aria-hidden="true" />Carolina Herrera</a></li>
-                <div class="left-section">
+            <ul class="row">
+                <li>
+                    <a id="homepage-link" class="flex" href="/">
+                        <img src="public/images/cloud-logo.svg" height="25" width="38" alt=""  />
+                        Carolina Herrera
+                    </a>
+                </li>
+                <div class="left-section flex">
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -22,65 +31,91 @@
         </nav>
     </header>
     <section id="white-section">
-        <h1>Hello, I'm Carolina!</h1>
-        <p>I am a <span class="italics">UX designer</span> with <span class="italics">front-end development</span> experience. I have a passion for creating <span class="blue-highlight">accessible, user-friendly</span> digital products that <span class="blue-highlight">empower people</span> and make a difference in their daily lives.</p>
+        <div class="container">
+            <div></div>
+            <h1 class="italics">Hi, I'm Carolina!</h1>
+            <img src="public/images/dandelions.svg" alt="" width="230" height="82"  />
+            <p>I am a <span class="italics">UX designer</span> with <span class="italics">front-end development</span> experience. I have a passion for creating <span class="blue-highlight">accessible, user-friendly</span> digital products that <span class="blue-highlight">empower people</span> and make a difference in their daily lives.</p>
+        </div>
     </section>
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="row">
+            <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
+            <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
             <div class="column" id="visit-day">
-                <img src="public/images/visit-day-thumbnail.png" alt="A phone displaying the event schedule screen from the PhD Visit Day app prototype." />
-                <h3>Cornell Information Science Visit Day</h3>
+                <a href="https://example.com">
+                    <h3>Cornell Information Science Visit Day</h3>
+                </a>
+                <img src="public/images/visit-day.svg" alt="A phone displaying the event schedule screen from the PhD Visit Day app prototype." />
                 <p>A web app prototype for prospective PhD students in the Information Science department to plan their schedule and explore their research area on Visit Day.</p>
-                <div class="tags">
+                <div class="tags row">
                     <p class="tag">UX Research & Design</p>
                     <p class="tag">Front-End Development</p>
                 </div>
             </div>
             <div class="column" id="umd-volunteers">
+                <a href="">
+                    <h3>Improving UMD Athletics Stadium Volunteers' Experience</h3>
+                </a>
                 <img src="public/images/julia-volunteer.png"
                     alt="A user persona named Julia, the Volunteer.
-                    Age: 20.
+                    Text: Age: 20.
                     Occupation: Student.
                     Location: University of Maryland, College Park.
                     Club: Dancing.
                     Bio: Julia is an undergraduate student at the University of Maryland, College Park majoring in Engineering. She is from Greenbelt, Maryland. She is in a dancing club and volunteers with her teams at concessions at basketball and football games. She enjoys doing activities with her friends and wants to help her team raise money."
                 />
-                <h3>Improving UMD Athletics Stadium Volunteers' Experience</h3>
                 <p>Developed a conceptual app solution that improves the efficiency of the ordering process at concessions stands through an online system, following interview and survey research with stadium volunteers.</p>
-                <div class="tags">
+                <div class="tags row">
                     <p>UX Research</p>
                 </div>
             </div>
+            <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
+            <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
         </div>
 
         <div class="row">
-            <div class="column" id="umd-volunteers">
+            <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
+            <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
+            <div class="column" id="meteorite">
+                <a href="">
+                    <h3>Meteorite Landings</h3>
+                </a>
                 <img src="public/images/meteorite-landings.png" alt="A stillshot from a meteorite landing aniamtion. The meteorite is flying through space towards Earth, moving over the Arctic Circle." />
-                <h3>Meteorite Landings</h3>
                 <p>An 3D visualization of meteorites landing on Earth over the years, allowing users to learn about science in an interactive way.</p>
-                <div class="tags">
+                <div class="tags row">
                     <p>UI Design</p>
                     <p>Front-End Development</p>
                 </div>
             </div>
 
-            <div class="column" id="umd-volunteers">
-                <img src="public/images/yourPOV.png" alt="A phone displaying YourPOV's homescreen. Text: Tuesday, May 16. Good Evening, John! How are you really? Share your day. Check in. See how your friends are doing. Andre Ramirez. Last seen 2 hours ago." />
-                <h3>YourPOV</h3>
+            <div class="column" id="yourPOV">
+                <a href="">
+                    <h3>YourPOV</h3>
+                </a>
+                <img src="public/images/yourPOV.svg" alt="A phone displaying YourPOV's homescreen. Text: Tuesday, May 16. Good Evening, John! How are you really? Share your day. Check in. See how your friends are doing. Andre Ramirez. Last seen 2 hours ago." />
                 <p>An app paired with VR designed to encourage college students to share their feelings and form deeper bonds with each other as part of an effort to combat loneliness on college campuses.</p>
-                <div class="tags">
+                <div class="tags row">
                     <p>UX Research & Design</p>
                 </div>
             </div>
+            <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
+            <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
         </div>
 
-        <div class="column" id="umd-volunteers">
-            <img src="public/images/cookierun-ovenbreak.png" alt="A CookieRun: Ovenbreak promotional image featuring several of the cookie characters." />
-            <h3>CookieRun: Ovenbreak Usability Evaluation</h3>
-            <p>Conducted a usability evaluation of the mobile game CookieRun: Ovenbreak, including a heuristic evaluation and usability testing, and developed recommendations to help retain novice players</p>
-            <div class="tags">
-                <p>UX Research</p>
+        <div class="row" style="margin-bottom: 0;">
+            <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
+            <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
+            <div class="column" id="cookieRun">
+                <a href="">
+                    <h3>CookieRun: Ovenbreak Usability Evaluation</h3>
+                </a>
+                <img src="public/images/cookierun-ovenbreak.png" alt="A CookieRun: Ovenbreak promotional image featuring several of the cookie characters." />
+                <p>Conducted a usability evaluation of the mobile game CookieRun: Ovenbreak, including a heuristic evaluation and usability testing, and developed recommendations to help retain novice players.</p>
+                <div class="tags row">
+                    <p>UX Research</p>
+                </div>
             </div>
         </div>
 
@@ -94,22 +129,24 @@
                 <p>I aim to enhance <span class="blue-highlight">digital accessibility</span> through my work to share modern technological tools with as many people as possible, helping them solve <span class="blue-highlight">real world problems.</span></p>
                 <p>In my free time, you will find me reading, watching Korean dramas, or feeding my sourdough starter.</p>
             </div>
-            <div id="headshot">
-                <img src="public/images/name-tag.png" alt="" />
-                <img src="public/images/headshot.jpg" alt="Carolina Herrera." />
+            <div class="photo-container">
+                <div class="row">
+                    <img id="name-tag" src="public/images/name-tag.png" alt="" />
+                    <img id="headshot" src="public/images/headshot.jpg" alt="Carolina Herrera." />
+                </div>
             </div>
         </div>
     </section>
     <section id="contact">
-        <h3>Say Hi!</h3>
+        <h2>Say Hi!</h2>
         <p>Interested in working together or just want to say hi? Feel free to reach out!</p>
         <div class="row">
-            <a class="row" href="mailto:cherrer3@umd.edu">
-                <i class="fa-regular fa-envelope" title="Email me"></i>
+            <a id="email" class="row" href="mailto:cherrer3@umd.edu">
+                <i class="fa-regular fa-envelope"></i>
                 <p>cherrer3@umd.edu</p>
             </a>
-            <a href="https://github.com/caroherrera24"><i class="fa-brands fa-github" title="View my Github profile"></i></a>
-            <a href="https://www.linkedin.com/in/carolina-herrera-233608250/"><i class="fa-brands fa-linkedin-in" title="Visit my LinkedIn profile"></i></a>
+            <a id="github" href="https://github.com/caroherrera24"><i class="fa-brands fa-github" title="View my Github profile"></i></a>
+            <a id="linkedin" href="https://www.linkedin.com/in/carolina-herrera-233608250/"><i class="fa-brands fa-linkedin-in" title="Visit my LinkedIn profile"></i></a>
         </div>
     </section>
 </body>
