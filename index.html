@@ -22,9 +22,9 @@
                     </a>
                 </li>
                 <div class="left-section flex">
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a class="nav-item"  href="#portfolio">Portfolio</a></li>
+                    <li><a class="nav-item" href="#about">About</a></li>
+                    <li><a class="nav-item" href="#contact">Contact</a></li>
                     <li><a href="">Resume</a></li>
                 </div>
             </ul>
@@ -35,7 +35,7 @@
             <div></div>
             <h1 class="italics">Hi, I'm Carolina!</h1>
             <img src="public/images/dandelions.svg" alt="" width="230" height="82"  />
-            <p>I am a <span class="italics">UX designer</span> with <span class="italics">front-end development</span> experience. I have a passion for creating <span class="blue-highlight">accessible, user-friendly</span> digital products that <span class="blue-highlight">empower people</span> and make a difference in their daily lives.</p>
+            <p>I am a UX designer with <span class="italics">front-end development</span> experience. I have a passion for creating <span class="blue-highlight">accessible, user-friendly</span> digital products that <span class="blue-highlight">empower people</span> and make a difference in their lives.</p>
         </div>
     </section>
     <section id="portfolio">
@@ -95,7 +95,7 @@
                     <h3>YourPOV</h3>
                 </a>
                 <img src="public/images/yourPOV.svg" alt="A phone displaying YourPOV's homescreen. Text: Tuesday, May 16. Good Evening, John! How are you really? Share your day. Check in. See how your friends are doing. Andre Ramirez. Last seen 2 hours ago." />
-                <p>An app paired with VR designed to encourage college students to share their feelings and form deeper bonds with each other as part of an effort to combat loneliness on college campuses.</p>
+                <p>A mobile app paired with VR designed to encourage college students to share their feelings and form deeper bonds with each other as part of an effort to combat loneliness on college campuses.</p>
                 <div class="tags row">
                     <p>UX Research & Design</p>
                 </div>
@@ -104,7 +104,7 @@
             <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
         </div>
 
-        <div class="row" style="margin-bottom: 0;">
+        <div class="row">
             <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
             <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
             <div class="column" id="cookieRun">
@@ -125,9 +125,9 @@
         <div class="row">
             <div id="about-text">
                 <p>I recently graduated from Cornell with a Bachelor’s degree in <span class="italics">Information Science</span> (Behavioral Science, Data Science, and UX). I am currently pursing a Master’s degree in <span class="italics">Human-Computer Interaction</span> at UMD.</p>
-                <p>As an aspiring <span class="italics">UX designer</span> with a solid foundation in <span class="italics">front-end development</span> and <span class="italics">data visualization</span>, I am fascinated by both the design and technical aspects behind the user experience. By bridging the gap between the two, I design flexible, <span class="blue-highlight">user-centered</span> solutions while keeping <span class="blue-highlight">technical constraints</span> in mind and work with developers to ensure a smooth implementation process.</p>
-                <p>I aim to enhance <span class="blue-highlight">digital accessibility</span> through my work to share modern technological tools with as many people as possible, helping them solve <span class="blue-highlight">real world problems.</span></p>
-                <p>In my free time, you will find me reading, watching Korean dramas, or feeding my sourdough starter.</p>
+                <p>As an aspiring UX designer with a solid foundation in <span class="italics">front-end development</span> and <span class="italics">data visualization</span>, I am fascinated by the design and technical aspects behind the user experience. By bridging the gap between the two, I design <span class="blue-highlight">user-centered</span> solutions while keeping technical constraints in mind and <span class="blue-highlight">collaborate effectively</span> with developers to smooth the implementation process.</p>
+                <p>I aim to improve <span class="blue-highlight">digital accessibility</span> through my work to share modern technological tools with as many people as possible, helping them solve <span class="blue-highlight">real world problems.</span></p>
+                <p>In my free time, you will find me reading, watching Korean dramas, or feeding my sourdough starter. ✌️</p>
             </div>
             <div class="photo-container">
                 <div class="row">
@@ -138,9 +138,9 @@
         </div>
     </section>
     <section id="contact">
-        <h2>Say Hi!</h2>
+        <h2 class="italics">Say Hi!</h2>
         <p>Interested in working together or just want to say hi? Feel free to reach out!</p>
-        <div class="row">
+        <div class="row" id="links">
             <a id="email" class="row" href="mailto:cherrer3@umd.edu">
                 <i class="fa-regular fa-envelope"></i>
                 <p>cherrer3@umd.edu</p>
@@ -149,5 +149,7 @@
             <a id="linkedin" href="https://www.linkedin.com/in/carolina-herrera-233608250/"><i class="fa-brands fa-linkedin-in" title="Visit my LinkedIn profile"></i></a>
         </div>
     </section>
+
+    <script src="public/main.js"></script>
 </body>
 </html>
