@@ -13,28 +13,32 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="row">
-                <li>
-                    <a id="homepage-link" class="flex" href="/">
-                        <img src="public/images/cloud-logo.svg" height="25" width="38" alt=""  />
-                        Carolina Herrera
-                    </a>
-                </li>
-                <div class="left-section flex">
-                    <li><a class="nav-item"  href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-item" href="#about">About</a></li>
-                    <li><a class="nav-item" href="#contact">Contact</a></li>
-                    <li><a href="">Resume</a></li>
-                </div>
-            </ul>
+        <nav class="row">
+            <div class="row">
+            <a id="homepage-link" class="flex" href="/">
+                <img src="public/images/cloud-logo.svg" height="25" width="38" alt=""  />
+                Carolina Herrera
+            </a>
+                <button id="hamburger" aria-label="Toggle the menu" aria-expanded="false" >
+                    <p>Menu</p>
+                    <i id="open-icon" class="fa-solid fa-bars" aria-hidden=”true”></i>
+                    <i id="close-icon" class="fa-solid fa-xmark hidden" aria-hidden="true"></i>
+                </button>
+            </div>
+
+                <ul class="row left-section hidden">
+                        <li><a class="nav-item"  href="#portfolio">Portfolio</a></li>
+                        <li><a class="nav-item" href="#about">About</a></li>
+                        <li><a class="nav-item" href="#contact">Contact</a></li>
+                        <li><a href="">Resume</a></li>
+                </ul>
         </nav>
     </header>
     <section id="white-section">
         <div class="container">
-            <div></div>
             <h1 class="italics">Hi, I'm Carolina!</h1>
-            <img src="public/images/dandelions.svg" alt="" width="230" height="82"  />
+            <img id="wider-dandelions" src="public/images/dandelions.svg" alt="" width="230" height="82"  />
+            <img id="smaller-dandelions" src="public/images/dandelions-smaller.svg" alt="" width="95" height="72" />
             <p>I am a UX designer with <span class="italics">front-end development</span> experience. I have a passion for creating <span class="blue-highlight">accessible, user-friendly</span> digital products that <span class="blue-highlight">empower people</span> and make a difference in their lives.</p>
         </div>
     </section>
@@ -142,11 +146,11 @@
         <p>Interested in working together or just want to say hi? Feel free to reach out!</p>
         <div class="row" id="links">
             <a id="email" class="row" href="mailto:cherrer3@umd.edu">
-                <i class="fa-regular fa-envelope"></i>
+                <i class="fa-regular fa-envelope" title="Email me"></i>
                 <p>cherrer3@umd.edu</p>
             </a>
-            <a id="github" href="https://github.com/caroherrera24"><i class="fa-brands fa-github" title="View my Github profile"></i></a>
-            <a id="linkedin" href="https://www.linkedin.com/in/carolina-herrera-233608250/"><i class="fa-brands fa-linkedin-in" title="Visit my LinkedIn profile"></i></a>
+            <a id="github" href="https://github.com/caroherrera24"><i class="fa-brands fa-github" title="View my Github profile" role="img"></i></a>
+            <a id="linkedin" href="https://www.linkedin.com/in/carolina-herrera-233608250/"><i class="fa-brands fa-linkedin-in" title="Visit my LinkedIn profile" role="img"></i></a>
         </div>
     </section>
 
