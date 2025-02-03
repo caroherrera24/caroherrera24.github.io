@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMD Stadium Volunteers</title>
+
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../public/styles/styles.css">
+    <link rel="stylesheet" href="../public/styles/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rancho&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/0d359cebd2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="row">
+            <div class="row">
+            <a id="homepage-link" class="flex" href="/">
+                <img src="../public/images/cloud-logo.svg" height="25" width="38" alt=""  />
+                Carolina Herrera
+            </a>
+                <button id="hamburger" aria-label="Toggle the menu" aria-expanded="false" >
+                    <p>Menu</p>
+                    <i id="open-icon" class="fa-solid fa-bars" aria-hidden=”true”></i>
+                    <i id="close-icon" class="fa-solid fa-xmark hidden" aria-hidden="true"></i>
+                </button>
+            </div>
+
+                <ul class="row left-section hidden">
+                        <li><a class="nav-item"  href="/#portfolio">Portfolio</a></li>
+                        <li><a class="nav-item" href="/#about">About</a></li>
+                        <li><a class="nav-item" href="/#contact">Contact</a></li>
+                        <li><a href="https://drive.google.com/file/d/1GLTReBrMFSw4BKuqHnHpztBoNsW__JP7/view?usp=sharing">Resume</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <section class="darkblue-section top-section">
+        <div class="container">
+            <h1>Improving the UMD Athletics Stadium Volunteer Experience</h1>
+            <h2 class="light">Overview</h2>
+            <p>As part of my coursework for INST 710 (User Experience Research Methods), I collaborated with 3 other UX researchers to understand how volunteers at UMD stadium games influence the fan experience. To do this, we conducted 5 interviews along with a survey. After our data analysis, we identified volunteers’ and consumers’ pain points.  We created the design concept of an online ordering system that allows customers to order food and alcohol online for themselves and family/friends while following stadium policies and guidelines as a solution.</p>
+            <div class="row">
+                <div class="overview-details">
+                    <p class="bold">Role</p>
+                    <p>UX Researcher</p>
+                </div>
+                <div class="overview-details">
+                    <p class="bold">Timeline</p>
+                    <p>October 2024 - December 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section>
+            <h2>Background</h2>
+            <p>The University of Maryland’s Department of Intercollegiate Athletics is interested in improving fan engagement and attendance at their stadium games. Fan attendance is relatively low, and fans often begin to leave after halftime. We were tasked with digging deeper into the reason behind this and discovering how we can improve the fan experience.</p>
+            <p>Our group specifically focused on stadium volunteers as a stakeholder in this issue. Stadium volunteers work in the concession stands at basketball and football games as part of a fundraising event for a non-profit organization. In return, the non-profit receives a percentage of that day’s sales. We wanted to cover the aspects of the fan-volunteer interactions to come to a solution.</p>
+        </section>
+
+        <section>
+            <h2>Research Question</h2>
+            <p id="research-question" class="white-box">How do stadium volunteers influence the experience of fans at University of Maryland sports games?</p>
+            <p>Our project aims to understand not only how the process of volunteering affects the experience of volunteers but, more importantly, how the experience of fans of University of Maryland sports games are affected by stadium volunteers.</p>
+        </section>
+
+        <section>
+            <h2>User Research</h2>
+            <p>Our user research methodologies included:</p>
+            <ol>
+                <li><span class="bold">Contextual interviews:</span> We interviewed and observed stadium volunteers working at the concessions stands</li>
+                <li><span class="bold">Surveys:</span> We gathered insights about stadium volunteers’ thoughts and feelings about their volunteering experience</li>
+            </ol>
+
+
+            <h3>Method 1: Contextual Interviews</h3>
+            <p>We conducted a total of 5 interviews. Our participants were all current stadium volunteers and undergraduate students that were volunteering on the behalf of 2 different UMD-affiliated clubs.</p>
+            <p>4 contextual interviews took place during a men’s basketball game at the Xfinity Center. 2 of the participants were volunteering at a food concession stand and the other 2 were at a beer concession stand. These contextual interviews allowed us to observe the stadium volunteers’ environment, tasks, and interactions with customers.</p>
+
+            <div class="image-gallery row">
+                <img id="food-concessions" src="../public/images/umd-stadium-volunteers/food-concessions.jpg" alt="Four stadium volunteers stand behind the counter of concessions stand. Two of them attend to customers" />
+                <img id="map" src="../public/images/umd-stadium-volunteers/kitchen-layout.jpg" alt="Sketch of a the kitchen layout. At the back of the kitchen, there is an oven, table, and sink. In the front, there is a fridge, a fries station, and another table. Another fridge takes up the right wall." />
+                <img id="beer-stand" src="../public/images/umd-stadium-volunteers/beer-stand-front.jpg" alt="Two stadium volunteers stand behind the beer stand.">
+                <img id="taller-image" src="../public/images/umd-stadium-volunteers/beer-stand-back.jpg" alt="Behind the counter, there are three beer taps, two stacks of plastic cups, and a payment terminal.">
+            </div>
+
+            <p>The fifth interview was conducted off-site with a volunteer who worked in the kitchen of the food concession stand. This filled in a gap in our knowledge about the food preparation process because we were not granted access behind the counter by the concessions manager due to their regulations. With the participant, we sketched a model of the kitchen’s layout, demonstrating how volunteers navigate the space.</p>
+
+            <h3>Method 2: Surveys</h3>
+            <p>We ran a survey to discover information about the volunteers’ experience, notably before they arrive at the stadium and after the game ended. We also wanted to gain insights about the volunteers’ motivations and feelings regarding their experience.</p>
+            <p>We recruited participants with known volunteering experience through email and social media, receiving 16 responses. All respondents were affiliated with UMD and volunteered for a student organization at UMD. 81.25% (13/16) of respondents were undergraduate students, 12.5% (2/16) were graduate students, and 6.25% (1/16) was an exchange student.</p>
+
+            <h3>Key Findings</h3>
+            <div class="row graphs">
+                    <img src="../public/images/umd-stadium-volunteers/volunter-experience-chart.png" alt="A bar chart titled 'How as your experience volunteering?' 1 and 2 recieved no respones. 3 recieved three responses, 4 recieved 8 responses, and 5 recieved five responses." />
+
+                    <img src="../public/images/umd-stadium-volunteers/volunteer-again-chart.png" alt="A bar chart titled 'How likely are you to volunteer again?' 1 recieved a single response, 2 recieved no responses, 3 recieved a single response, 4 recieved six responses, and 5 recieved eight responses." />
+            </div>
+            <p>The stadium volunteers viewed their experiences as generally positively. However, after closely analyzing our data through affinity diagramming, we identified some shortcomings with the volunteering process that hinder the customer experience as well as pleasure points that serve user delight.</p>
+            <div class="row column-container">
+                <div class="column">
+                    <div class="row">
+                        <i class="fa-regular fa-face-frown"></i>
+                        <p class="bold">Pain Points:</p>
+                    </div>
+                    <ul>
+                        <li>Volunteers are often inexperienced and don’t receive prior food training &#8594; they must pick up these skills as they work, leaving room for mistakes and potentially delaying orders</li>
+                        <li>Sometimes there are customer service-related issues volunteers are not equipped to handle properly (i.e. intoxicated or rude customers)</li>
+                        <li>Volunteering requires a lot of mental energy</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="row">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <p class="bold">Pleasure Points:</p>
+                    </div>
+                    <ul>
+                        <li>There is required training and extensive policies about serving alcohol</li>
+                        <li> Stadium volunteers generally enjoy engaging with customers</li>
+                        <li>Volunteering is an opportunity to socialize with friends and club members</li>
+                        <li>Being able to fundraise for their club</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Persona</h3>
+            <div id="persona" class="white-box">
+                <div class="row">
+                    <img src="../public/images/umd-stadium-volunteers/julia.png" width="170" height="200" alt="Julia Carter" />
+                    <div id="persona-details">
+                        <p class="bold">Julia Carter</p>
+                        <ul>
+                            <li><span class="bold">Age:</span> 20</li>
+                            <li><span class="bold">Occupation:</span> Student</li>
+                            <li><span class="bold">School: </span>University of Maryland, College Park</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Biography</h4>
+                <p>Julia is an undergraduate student at the University of Maryland, College Park majoring in Engineering. She is from Greenbelt, Maryland. She is in a dancing club, and volunteers with her team at concessions at basketball and football games.</p>
+                <div class="row column-container">
+                    <div class="column">
+                        <h4>Interests</h4>
+                        <p>Julia enjoys dancing and aims to become a better dancer. She likes socializing and being involved in her club.</p>
+                        <h4>Frustrations</h4>
+                        <p>Julia was frustrated with the lack of preparation before volunteering because customers expect to be skilled in her role. A pain point for Julia is that customers can be very rude to her. Volunteering is very time-consuming and mentally draining. </p>
+                    </div>
+                    <div class="column">
+                        <h4>Motivations</h4>
+                        <p>Julia is required to volunteer as a member of her dance team. Julia’s main goal is support her dance club by helping raise money for the club’s transportation and other necessities. She also wants to spend time with her friends and teammates.</p>
+                        <h4>Needs and Expectations</h4>
+                        <p>Julia expects customers to be patients and understanding with her because she is a student. She needs to be mentally prepare beforehand because she is anticipating a long shift with minimal breaks at the stadium.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Physical Model</h3>
+            <p>Based on the data we collected, we identified three main groups that volunteers interact with while working at the concession stand: team members, UMD concessions employees, and customers. We created a physical model to show the different types of relationships that concession stand volunteers have and how that can impact the fan experience.</p>
+            <img id="physical-model" src="../public/images/umd-stadium-volunteers/relationship-model.png" height="600" width="800" alt="A diagram demonstrating how close team members, UMD concessions employees, and customers are to the stadium volunteers. Teams members are the closest, followed by the the UMD concessions employees, and customers are last.">
+        </section>
+
+        <section>
+            <h2>Brainstorming</h2>
+            <p>As a team, we created a list of issues that customers and volunteers along with a list of hot ideas that solve these issues, improving the experience for both stakeholders.</p>
+            <div class="row column-container">
+                <div class="column">
+                    <p class="bold">Hot Ideas:</p>
+                    <ul>
+                        <li>An app that tells customers when their food is ready</li>
+                        <li>Having a kiosk for customers to order from and automate the ordering process</li>
+                        <li>Make the food preparation process a game</li>
+                        <li>Alcohol tracker</li>
+                        <li>Food conveyor belt</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <p class="bold">Issues:</p>
+                    <ul>
+                        <li>Customers take out their credits cards too early from the card reader</li>
+                        <li>Customers want to purchase more than 2 beers at a time which goes against concessions policies</li>
+                        <li>Volunteers don’t receive customer service training</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section id="sketches">
+                <h3>Sketches</h3>
+                <p>We explored potential solutions inspired by our hot ideas and issues list further through vision sketches.</p>
+                <div class="row column-container">
+                    <div class="column">
+                        <img src="../public/images/umd-stadium-volunteers/vision-1.jpg" alt="A diagram demonstrating how an order would be fufilled after it is put in.">
+                        <p class="image-caption">Customers order through the app, which volunteers can see in the back on a screen. Customers receive a notification that they can get their order from the pickup location.</p>
+                    </div>
+                    <div class="column">
+                        <img src="../public/images/umd-stadium-volunteers/vision-4.jpg" alt="A sketch showing the four modalities for customer service training. At the end of the class,  the volunteers take a scenario final test in order to recieve their certification of completion.">
+                        <p class="image-caption">Stadium volunteers are required to take customer service training which is scenario-based. There are various modalities for the customer service training, including in-person, virtual, and VR. Volunteers have to pass a scenario final test to get a certification of completion.</p>
+                    </div>
+                </div>
+
+                <div class="row column-container">
+                    <div class="column">
+                        <img src="../public/images/umd-stadium-volunteers/vision-2.png" alt="A sketch of a UMD concessions app that includes users' ticket, allows group ordering, and tracks number of alcholic drinks ordered.">
+                        <p class="image-caption">Customers can order alcohol and pay through an app. This  helps the stadium volunteers keep track of the amount of drinks each customer has had. In the app, users can form groups, allowing one customer to order alcoholic beverages for other members in their group.</p>
+                    </div>
+                    <div class="column">
+                        <img src="../public/images/umd-stadium-volunteers/vision-3.png" alt="A diagram showing how customers get food through a food conveyor system from concessions. Please refer to the subsequent text for details.">
+                        <p class="image-caption">Customers pay a flat price for a box and they can select food from a conveyor belt. Volunteers place food on the conveyor belt as soon as it is ready.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <h2>Proposed Solution</h2>
+            <p>We combined features from our visioning session to come to a single conceptual product. Our idea is an app that has your ticket, ID,  and can track orders and the amount of alcohol you can have. There is verification for ID on the app to ensure younger people aren’t trying to put in fake IDs. The app has a unique QR code for each user that users need to show to the volunteers. The volunteers can scan the QR code and it will show them the person’s ID and alcohol limit. Fans can order food to specific concession stands, and the concession stands will receive the orders. They are able to pay on the app (although they can pay in person if they wish). Then the app will tell them when the food is ready. Fans can add friends and family to a group so they can order and pickup for others too.</p>
+            <ul class="white-box-list row">
+                <li class="white-box">
+                    <i class="fa-solid fa-mobile-screen-button"></i>  Convenient mobile ordering
+                </li>
+                <li class="white-box">
+                    <i class="fa-solid fa-ban"></i> No waiting in line
+                </li>
+                <li class="white-box row">
+                    <i class="fa-solid fa-bowl-food"></i> 
+                    <p>Get notified when food is ready</p>
+                </li>
+                <li class="white-box row">
+                    <i class="fa-solid fa-arrow-down"></i> 
+                    <p>Less conflicts between volunteers and fans about alcohol limit</p>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+</html>

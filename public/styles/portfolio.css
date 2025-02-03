@@ -1,0 +1,202 @@
+:root {
+  --main-font: "Open Sans", serif;
+  --main-font-size: 17.3px;
+  --mobile-font-size: 16px;
+  --secondary-font: "Rancho", serif;
+  --h3-font: "Happy Monkey", serif;
+  --background: #F3FAFD;
+  --blue-highlight: #3B789B;
+  --max-width: 1020px;
+  --nav-max-width: 1250px;
+}
+
+.darkblue-section {
+  background-color: var(--blue-highlight);
+  color: white;
+  padding: 53px 0;
+  margin-top: revert;
+}
+
+.darkblue-section h1 {
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+.darkblue-section h2 {
+  padding-bottom: 0;
+}
+
+.darkblue-section p {
+  line-height: 29.12px;
+}
+
+.overview-details {
+  width: 50%;
+  padding-top: 1rem;
+}
+
+main > section:last-child {
+  margin-bottom: 45px;
+}
+
+section h2 + p{
+  margin-top: 0;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin: 20px 0;
+}
+
+.row > p, .column p.bold, #persona p {
+  margin: 0;
+}
+
+.column ul {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.white-box-list {
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.white-box-list li {
+  list-style: none;
+  width: fit-content;
+  padding: 0.75em;
+}
+
+.white-box-list li.row {
+  align-items: center;
+}
+
+.white-box {
+  background-color: white;
+  border-radius: 10px;
+  border: thin black solid;
+}
+
+#research-question {
+  padding: 22px 35px;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+}
+
+.image-gallery {
+  gap: 5px;
+}
+
+.image-gallery img {
+  width: 27%;
+  height: auto;
+}
+
+#taller-image {
+  width: 17%;
+}
+
+.graphs {
+  gap: 20px;
+}
+
+.graphs img {
+  width: 49%;
+}
+
+.image-caption {
+  width: 95%;
+  padding: 0 2.5%;
+}
+
+#sketches .row:first-of-type {
+  margin-bottom: 20px;
+}
+
+#persona {
+  padding: 35px;
+}
+
+#persona h4 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+#persona-details {
+  margin-left: 50px;
+}
+
+#persona-details > p {
+  font-size: 28px;
+}
+
+#physical-model {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 775px) {
+  .image-gallery {
+    flex-wrap: wrap;
+  }
+
+  #food-concessions, #map{
+    width: 49.5%;
+  }
+
+  #beer-stand {
+    width: 64%;
+  }
+  #taller-image {
+    width: 35%;
+  }
+
+  section > .column-container, #persona .column-container, .graphs {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #persona .column-container {
+    gap: 0;
+  }
+
+  .column-container .column, .graphs img {
+    width: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 610px) {
+  #persona .row:first-child {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #persona-details p {
+    text-align: center;
+  }
+
+  #persona img {
+    margin: auto;
+  }
+
+  #persona ul {
+    margin-bottom: 0;
+  }
+
+  #persona-details {
+    margin: 0;
+  }
+
+  .image-gallery img {
+    width: 100% !important;
+  }
+  
+}
