@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Visit Day</title>
+
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../public/styles/styles.css">
+    <link rel="stylesheet" href="../public/styles/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rancho&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/0d359cebd2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="row">
+            <div class="row">
+            <a id="homepage-link" class="flex" href="/">
+                <img id="logo" src="../public/images/cloud-logo.svg" height="25" width="38" alt=""  />
+                Carolina Herrera
+            </a>
+                <button id="hamburger" aria-label="Toggle the menu" aria-expanded="false" >
+                    <p>Menu</p>
+                    <i id="open-icon" class="fa-solid fa-bars" aria-hidden=”true”></i>
+                    <i id="close-icon" class="fa-solid fa-xmark hidden" aria-hidden="true"></i>
+                </button>
+            </div>
+
+                <ul class="row left-section hidden">
+                        <li><a class="nav-item"  href="/#portfolio">Portfolio</a></li>
+                        <li><a class="nav-item" href="/#about">About</a></li>
+                        <li><a class="nav-item" href="/#contact">Contact</a></li>
+                        <li><a href="https://drive.google.com/file/d/1GLTReBrMFSw4BKuqHnHpztBoNsW__JP7/view?usp=sharing">Resume</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <section class="darkblue-section top-section">
+        <div class="container">
+            <h1>PhD Visit Day</h1>
+            <h2 class="light">Overview</h2>
+            <p>This was a 3 month-long project for INFO 4340 (App Design and Prototyping). As part of a five-member team, I conducted  interviews with PhD students and analyzed the data to identity three main user goals on PhD Visit Day. We addressed these findings by designing and developing a high-fidelity app prototype with Vue.js and Bootstrap. The app aims to be a tool for prospective students on PhD Visit Day by helping them manage their schedule and explore their research areas.</p>
+            <div class="row">
+                <div class="overview-details">
+                    <p class="bold">Role</p>
+                    <p>UX Researcher & Engineer</p>
+                </div>
+                <div class="overview-details">
+                    <p class="bold">Timeline</p>
+                    <p>March 2023 - May 2023</p>
+                </div>
+            </div>
+            <div class="overview-details">
+                <p class="bold">Tools & Skills</p>
+                <p>Vue.js, Bootstrap, User Interviews, Prototyping</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section>
+            <h2>Final Prototype</h2>
+            <a href="https://caroherrera24.github.io/phd-visit-day/">
+                <img class="width-100" src="../public/images/phd-visit-day/demo.svg" alt="Four mobile screens from the mobile app for PhD Visit Day.">
+            </a>
+            <p class="image-caption">The app has a responsive design and works for all screen sizes, although the mobile screens are shown above. View it <a class="link" href="https://caroherrera24.github.io/phd-visit-day/">here</a>.</p>
+        </section>
+
+        <section>
+            <h2>Background</h2>
+            <p>Our client, the Information Science department at Cornell, asked us to create an app for prospective PhD students who are attending the College of Computing and Information Science (CIS)’s PhD Visit Day. Visit Day is an opportunity for prospective students to visit the Ithaca campus, interact with faculty, and meet their potential peers. It also helps inform their decision in regard to accepting the admissions offer at Cornell or not.</p>
+            <p>The app is an opportunity to streamline the prospective students’ experience during a hectic schedule and ensure a successful Visit Day.</p>
+        </section>
+
+        <section>
+            <h2>User Research</h2>
+            <p>Our targeted users were prospective CIS PhD students attending Visit Day. We wanted to understand users' overall attitudes towards the PhD Visit Day and what they consider to be a positive experience. To do this, I conducted a total of 6 semi-structured interviews with current Information Science PhD students who previously attended the event.</p>
+            <img class="width-100" src="../public/images/phd-visit-day/affinity-diagram.png" alt="A diagram demonstrating the data analysis. Please refer to the subsequent text for details.">
+            <p class="image-caption">By creating an affinity diagram, we learned that prospective students had a desire to: (a) understand research areas covered at Cornell, (b) understand the program by talking to people, (c) make connections with peers, (d) have a productive day, (e) know what campus is like, and (f) know what to prepare before leaving for the visit days.</p>
+
+            <h3>Key Findings</h3>
+            <ol>
+                <li>When selecting doctoral programs, they want to ensure it is a good fit for their research interests.</li>
+                <li>PhD students were unfamiliar with the Ithaca region before being admitted.</li>
+                <li>Prospective students expressed an interest in meeting other prospective students in a casual setting.</li>
+                <li>The itinerary was overwhelming for many prospective students and logistically challenging for some.</li>
+                <li>Students prefer using a mobile application to check the itinerary.</li>
+            </ol>
+            <p id="key-finding" class="white-box">We learned that there is a need for a mobile application that includes itinerary management, focusing on research, and facilitates social bonding between potential peers.</p>
+
+            <h3>User Goals</h3>
+            <p>From our data analysis, we identified three main user goals to address in our app and improve user experience on Visit Day:</p>
+            <ul id="user-goals" class="white-box-list row">
+                <li class="white-box row">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Prioritize attending events with labs and professors that align with their research interests</p>
+                </li>
+                <li class="white-box row">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Make connections with other students more conveniently</p>
+                </li>
+                <li class="white-box row">
+                    <i class="fa-solid fa-map"></i>
+                    <p>Move efficiently between activities</p>
+                </li>
+            </ul>
+
+            <h3>Persona</h3>
+            <p>To summarize our understanding of the target users, we created a persona called Jack Dorsey.</p>
+            <div id="persona" class="white-box">
+                <div class="row">
+                    <img src="../public/images/phd-visit-day/jack.png" width="192" height="191" alt="Jack Dorsey">
+                    <div id="persona-details">
+                        <p class="bold">Jack Dorsey</p>
+                        <ul>
+                            <li><span class="bold">Age:</span> 25</li>
+                            <li><span class="bold">Hometown:</span> San Francisco</li>
+                            <li><span class="bold">PhD Program: </span>Information Science</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Biography</h4>
+                <p>Jack is an accepted CIS Ph.D. student who received offers from both University of California, Berkeley and Cornell University. He is facing a tough decision on which program to choose. Since he has never visited Cornell before, he sees the visit day as a chance to gain a deeper understanding of the program and the location, which will help him make his final decision. He wants to tour different labs to see which best fits his research interests. He also wants to connect with other prospective and current PhD students at Cornell with the latter helping him learn more about the student experience. Because Jack has never been to Cornell’s Ithaca campus before, he is relying heavily on the itinerary and information provided by the department to navigate his way around during his visit.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>UX Design</h2>
+            <h3>Brainstorming</h3>
+            <p>We discussed potential features that could address the user’s goals. We came up with a list of requirements that are essential for solving the major user goals we identified. There were other features we would consider adding to the app depending on feasibility and time limitations.</p>
+            <div class="row">
+                <div class="column">
+                    <p class="bold">Essential Features:</p>
+                    <ul>
+                        <li>Upcoming events</li>
+                        <li>List of people attending each event</li>
+                        <li>Contact info of other prospective students</li>
+                        <li>Recommended events that match users’ interests</li>
+                        <li>Sign up form (interests & contact info)</li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <p class="bold">Potential Additional Features:</p>
+                    <ul>
+                        <li>Google maps integration</li>
+                        <li>Weather</li>
+                        <li>Campus tours</li>
+                        <li>Subway maps</li>
+                        <li>Links to hotels/restaurants</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section id="design-process">
+                <h3>Design Process</h3>
+                <ol>
+                    <li>
+                        <p>Each team member created a sketch of their design for the app.</p>
+                        <img src="../public/images/phd-visit-day/whiteboard-sketching.jpg" width="640" height="480" alt="Carolina is drawing a sketch on a whiteboard.">
+                    </li>
+                    <li>
+                        <p>We performed a “gallery walk” with each team member’s design and placed a sticky note on aspects of the design that appealed to them. This helped us identify features that we gravitated towards and commonalities between members’ designs.</p>
+                        <img src="../public/images/phd-visit-day/wall-walk.jpg" width="640" height="480" alt="Three people gather around a whiteboard, looking at a sketch of an app.">
+                    </li>
+                    <li>Each member presented their designs and the listening team members provided feedback on the designs. Some talking points were debating the use of profile pictures to fight bias, feasibility of implementing third party apps, whether or not users really needed a link to the reimbursement form, user flows, and filter implementation/usefulness for research areas.</li>
+                    <li>
+                        We selected features of each team member’s design that we wanted to include in our final design.
+                    </li>
+                </ol>
+            </section>
+
+            <section id="final-wireframe">
+                <h3>Final Wireframe</h3>
+                <div class="row">
+                    <div class="column">
+                        <img src="../public/images/phd-visit-day/home-view.jpg" alt="A hand-drawn design of the event schedule.">
+                        <p class="image-caption"><span class="bold">Home:</span> The app opens to display the event schedule with an overview of upcoming events. Each event entry contains essential information users need to prepare, such as time, weather forecast, and location. Tags help denote different research fields for each event. Since users may not be interested in all events, there is a toggle to focus on recommended events based on their research areas.</p>
+                    </div>
+                    <div class="column">
+                        <img src="../public/images/phd-visit-day/event-details.jpg" alt="A hand-drawn mobile screen showing an event's information, including time, location, a description, and a list of tenative attendees.">
+                        <p class="image-caption"><span class="bold">Event Details:</span> Users can access more detailed event information. Of particular note are the tentative attendees, who can help users connect at the event with Cornell faculty and other prospective students. To appear on the tentative attendees list, users must click on the checkmark at the top right of the screen.</p>
+                    </div>
+                    <div class="column">
+                        <img src="../public/images/phd-visit-day/faculty-profile.jpg" alt="A hand-drawn design of a user's profile, showing their contact information, research areas, a biography, and a list of other events they're attending.">
+                        <p class="image-caption"><span class="bold">Faculty Profile:</span> This screen lays out all the information about faculty members a user might find useful in regard to learning more about them and potentially connecting with them. This includes contact information, research areas, and a brief biography of the person.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="../public/images/phd-visit-day/faculty-favorites.jpg" alt="A hand-drawn mobile screen of the Faculty Favorites. On screen is a restaurant.">
+                        <p class="image-caption"><span class="bold">Local Tips:</span> This screen provides users with popular local spots, including restaurants and sightseeing. Each entry has an image carousel, description, and relevant tags.</p>
+                    </div>
+                    <div class="column">
+                        <img src="../public/images/phd-visit-day/directory.jpg" alt="A hand-drawn screen of the directory for faculty and students.">
+                        <p class="image-caption"><span class="bold">Directory:</span> The directory contains a list of Cornell’s faculty and prospective PhD students, which are separated into two tabs. The directory gives users another way to learn about people. By clicking on each profile, the user is taken to a detailed profile screen.</p>
+                    </div>
+                    <div class="column">
+                        <img src="../public/images/phd-visit-day/user-profile.jpg" alt="A hand-drawn design of a user's profile, showing your contact information, research interests, and faculty interests.">
+                        <p class="image-caption"><span class="bold">User’s Profile:</span> It contains their contact information, research interests, and faculty members they have indicated interest in. All of these preferences would be set during the app onboarding process with a quick form. The profile can be viewed by all other users on the app.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <h2>App Prototype</h2>
+            <p>Based on the design, I led the development of a high-fidelity web app prototype using Vue.js, Bootstrap, HTML, and CSS with my team. The app was primarily designed for mobile devices because we expect users to rely on their phones on Visit Day according to our user research, but it also works well with wider screens.</p>
+            <p>The prototype demonstrates the features that Jack can use when he goes to visit Cornell. Because we wanted to focus on app’s functionality and users’ interactions with the app’s main features, we did not prototype the onboarding form. In our prototype, we assume that Jack has already completed the form and set up his profile.</p>
+            <a class="button bold" href="https://caroherrera24.github.io/phd-visit-day/">Try the Prototype!</a>
+            <a href="https://caroherrera24.github.io/phd-visit-day/">
+                <img class="width-100" src="../public/images/phd-visit-day/demo.svg" alt="Four mobile screens from the mobile app for PhD Visit Day.">
+            </a>
+        </section>
+    </main>
+</body>
+</html>

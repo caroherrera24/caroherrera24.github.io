@@ -6,6 +6,7 @@
   --h3-font: "Happy Monkey", serif;
   --background: #F3FAFD;
   --blue-highlight: #3B789B;
+  --links: #97116D;
   --max-width: 1020px;
   --nav-max-width: 1250px;
 }
@@ -51,6 +52,15 @@ h3 {
   margin: 20px 0;
 }
 
+h2 + h3 {
+  margin-top: 0;
+}
+
+.link {
+  color: var(--links);
+  text-decoration: underline;
+}
+
 .row > p, .column p.bold, #persona p {
   margin: 0;
 }
@@ -58,6 +68,10 @@ h3 {
 .column ul {
   margin-bottom: 0;
   margin-top: 5px;
+}
+
+.column-container {
+  justify-content: space-between;
 }
 
 .white-box-list {
@@ -83,11 +97,15 @@ h3 {
   border: thin black solid;
 }
 
-#research-question {
+#research-question, #key-finding {
   padding: 22px 35px;
   text-align: center;
   width: fit-content;
   margin: auto;
+}
+
+#user-goals li {
+  max-width: 42.5%;
 }
 
 .image-gallery {
@@ -107,13 +125,26 @@ h3 {
   gap: 20px;
 }
 
-.graphs img {
+.graphs img, #sketches .column-container .column {
   width: 49%;
 }
 
 .image-caption {
   width: 95%;
   padding: 0 2.5%;
+}
+
+.button {
+  background-color: var(--blue-highlight);
+  color: white;
+  padding: 3px 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.width-100 {
+  width: 100%;
+  height: auto;
 }
 
 #sketches .row:first-of-type {
@@ -137,9 +168,28 @@ h3 {
   font-size: 28px;
 }
 
-#physical-model {
+#final-wireframe .row {
+  width: 100%;
+}
+
+#final-wireframe .row:first-of-type {
+  margin-bottom: 20px;
+}
+
+#final-wireframe .row .column {
+  width: 33.33%;
+}
+
+#final-wireframe img {
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 820px) {
+  #design-process img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 775px) {
@@ -170,13 +220,23 @@ h3 {
   .column-container .column, .graphs img {
     width: 100%;
   }
-  
+
+  #user-goals li {
+    max-width: unset;
+  }
 }
 
 @media only screen and (max-width: 610px) {
-  #persona .row:first-child {
+  #persona .row:first-child, .container .row {
     flex-direction: column;
+  }
+
+  #persona .row:first-child {
     gap: 20px;
+  }
+
+  .overview-details, .image-gallery img {
+    width: 100% !important;
   }
 
   #persona-details p {
@@ -193,10 +253,6 @@ h3 {
 
   #persona-details {
     margin: 0;
-  }
-
-  .image-gallery img {
-    width: 100% !important;
   }
   
 }
