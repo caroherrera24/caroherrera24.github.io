@@ -231,8 +231,8 @@ h2 + h3 {
     gap: 0;
   }
 
-  .column-container .column, .graphs img {
-    width: 100%;
+  .column-container .column, .graphs img, #sketches .column img {
+    width: 100% !important;
   }
 
   #user-goals li {
