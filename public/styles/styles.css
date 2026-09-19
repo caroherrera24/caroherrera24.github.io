@@ -4,7 +4,7 @@
     --mobile-font-size: 16px;
     --secondary-font: "Rancho", serif;
     --h3-font: "Happy Monkey", serif;
-    --background: #F3FAFD;
+    --background: #F6FBFE;
     --blue-highlight: #3B789B;
     --blue-tag: #89CFF0;
     --pink-tag: #F6B8E2;
@@ -26,15 +26,14 @@ html {
 
 body {
     width: 100%;
-    background-color: #F3FAFD;
+    background-color: var(--background);
     margin: 0 auto;
 }
 
 body > section, main > section {
-    width: 70%;
+    width: 95%;
     margin: 0 auto;
-    padding-top: 90px;
-    margin-top: -45px;
+    padding-top: 64px;
     max-width: var(--max-width);
 }
 
@@ -61,12 +60,12 @@ a {
 /* header/navigation styling */
 header {
     width: 100%;
-    position: sticky;
+    /* position: sticky; */
     top: -1px;
     background-color: var(--background);
     z-index: 1000;
     /* margin: 45px auto; */
-    border-bottom: thick solid black;
+    /* border-bottom: medium solid black; */
     /* box-shadow: 0px 15px 10px -15px #111;     */
 }
 
@@ -126,11 +125,13 @@ nav {
 
 /* top white section */
 #white-section {
-    background-color: white;
+    /* background-color: white; */
     /* padding-top: 0; */
-    padding: 90px 0;
-    line-height: 29.12px;
+    padding-top: 45px;
     margin-top: revert;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
 }
 
 #white-section p {
@@ -138,7 +139,6 @@ nav {
 }
 
 .container {
-    width: 70%;
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -163,14 +163,11 @@ nav {
     z-index: 0;
 }
 
-#smaller-dandelions {
-    display: none;
-}
-
-.blue-highlight {
-    background-color: var(--blue-highlight);
-    color: white;
-    padding: 0 5px;
+#cloud-animation {
+    min-width: 200px;
+    /* overflow: visible; */
+    padding: 0 0 20px;
+    /* border: thin solid black; */
 }
 
 .italics {
@@ -187,20 +184,19 @@ nav {
 
 /* portfolio section */
 section h2 {
-    padding-bottom: 45px;
+    padding-bottom: 20px;
     font-size: 28px;
     margin: 0;
 }
 
-#portfolio > .row {
+#portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1%;
     margin-bottom: 38px;
     justify-content: space-between;
     position: relative;
-    gap: 38px;
-}
-
-#portfolio > .row:last-child {
-    margin-bottom: 0;
 }
 
 .project {
@@ -208,10 +204,15 @@ section h2 {
     border: 3px solid black;
     border-radius: 6px;
     padding: 22px;
-    width: 42.5%;
+    flex: 1 0 44%;
+    margin-bottom: 1%;
     display: flex;
     flex-direction: column;
     position: relative;
+}
+
+.project img {
+    order: -1;
 }
 
 .project h3 {
@@ -221,11 +222,7 @@ section h2 {
     margin: 16px 0;
 }
 
-.row .project img, #cookieRun img {
-    order: -1;
-}
-
-.row .project > p, #cookieRun > p {
+.project > p {
     line-height: 105%;
     margin-top: 0;
     margin-bottom: 16px;
@@ -241,10 +238,6 @@ section h2 {
     right: 0;
 }
 
-#cookieRun {
-    margin-right: calc(50% + 19px);
-}
-
 .tags {
     flex-wrap: wrap;
     gap: 22px;
@@ -255,7 +248,7 @@ section h2 {
     font-family: var(--secondary-font);
     font-size: 20px;
     background-color: bisque;
-    box-shadow: 0px 3.5px 4px #b8b8b8;
+    /* box-shadow: 0px 3.5px 4px #b8b8b8; */
     display: inline-block;
     padding: 5px 10px;
     border: thin black solid;
@@ -393,9 +386,6 @@ i {
 /* media queries */
 @media only screen and (max-width: 1014px) {
     /* increase width of body content */
-    body > section, main > section, .container {
-        width: 85%;
-    }
 
     nav {
         width: 90%;
@@ -492,19 +482,6 @@ i {
 
 }
 
-@media only screen and (max-width: 650px) {
-    /* change dandelion image to smaller one */
-    #wider-dandelions {
-        display: none;
-    }
-
-    #smaller-dandelions {
-        display: initial;
-        left: 7px;
-    }
-
-}
-
 @media only screen and (max-width: 455px) {
     /* decrease font sizes */
     body {
@@ -513,7 +490,6 @@ i {
 
     section h2 {
         font-size: 24px;
-        padding-bottom: 25px;
     }
 
     .project h3 {
@@ -544,10 +520,6 @@ i {
         font-size: 30px;
         padding: 0;
         margin: initial;
-    }
-
-    #smaller-dandelions {
-        display: none;
     }
 
     #portfolio > .row {

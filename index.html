@@ -16,13 +16,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rancho&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/0d359cebd2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/InertiaPlugin.min.js"></script>
 </head>
 <body>
     <header>
         <nav class="row">
             <div class="row">
             <a id="homepage-link" class="flex" href="/">
-                <img id="logo" src="public/images/cloud-logo.svg" height="25" width="38" alt=""  />
+                <img id="logo" src="public/images/cloud-logo.svg" height="25" width="38" alt="" />
+                <!-- <img id="sun-logo" src="public/images/test2.svg" height="25" width="38" alt="" /> -->
                 Carolina Herrera
             </a>
                 <button id="hamburger" aria-label="Toggle the menu" aria-expanded="false" >
@@ -40,73 +44,109 @@
                 </ul>
         </nav>
     </header>
-    <section class="top-section" id="white-section">
-        <div class="container">
-            <h1>Hi, I'm Carolina</h1>
-            <!-- <img id="wider-dandelions" src="public/images/dandelions.svg" alt="" width="230" height="82"  />
-            <img id="smaller-dandelions" src="public/images/dandelions-smaller.svg" alt="" width="95" height="72" /> -->
-            <p>and I am a UX engineer! I have a passion for creating <span class="blue-highlight">accessible, user-friendly</span> digital products that <span class="blue-highlight">empower people</span> and make a difference in their lives.</p>
+    <section class="top-section container flex" id="white-section">
+        <div>
+            <h1>Hi! I'm Carolina, a UX engineer who creates digital experiences for real people.</h1>
+            <p>Blurring the line between code and design.</p>
         </div>
+        <svg id="cloud-animation" height="180" width="400"  viewBox="0 0 200 180" stroke="black" stroke-width="2" >
+        <!-- <circle class="sun" cx="65" cy="100" r="30" fill="#FA8607" stroke="#e65c6f" stroke-width="2" /> -->
+         <defs>
+            <radialGradient id="radial-gradient">
+                <!-- <stop offset="0%" stop-color="#FFF57B" /> -->
+                <!-- <stop offset="10%" stop-color="#FFECA8" /> -->
+            <!-- <stop offset="30%" stop-color="#FFE484" /> -->
+                <stop offset="90%" stop-color="#FFE469" />
+                <!-- <stop offset="90%" stop-color="#FFCC33" /> -->
+            <stop offset="95%" stop-color="#FC9601" />
+            <stop offset="100%" stop-color="#D14009" />
+            </radialGradient>
+            <linearGradient id="linear-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="rgba(255, 228, 105, 0)" />
+            <stop offset="100%" stop-color="#FFECA8"  />
+            </linearGradient>
+            <linearGradient id="reverse-linear-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#FFECA8" />
+            <stop offset="100%" stop-color="rgba(255, 228, 105, 0)" />
+            </linearGradient>
+        </defs>
+
+        <g class="sun-group" draggable="true" stroke="black" stroke-width="2">
+            <line  class="ray" id="ray" x1="65" y1="70" x2="65.001" y2="104" stroke="url(#linear-gradient)" stroke-width="4" stroke-linecap="round" opacity="0" />
+            <use href="#ray" class="ray" transform="rotate(22.5)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(45)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(67.5)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(90)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(112.5)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(135)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(157.5)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(180)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(202.5)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(225)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(247.5)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(270)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(292.5)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(315)" transform-origin="65 140" />
+            <use href="#ray" class="ray" transform="rotate(337.5)" transform-origin="65 140" />
+
+        
+        <circle class="sun" cx="65" cy="140" r="30" fill="url(#radial-gradient)" stroke="#D14009" stroke-width="2"></circle>
+        <image class="face" x="45" y="125" height="30" width="40" opacity="0" href="" />
+        </g>
+
+        <image class="cloud" href="public/images/white-cloud.svg" y="100" height="80" width="130" />
+    </svg>
     </section>
+    <!-- <img id="logo" src="public/images/cloud-logo.svg" height="50" width="76" alt=""  /> -->
+    
+
     <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="row">
-            <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
-            <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
-            <div class="project" id="visit-day">
-                <a href="portfolio/phd-visit-day.html">
-                    <h3>Cornell Information Science Visit Day</h3>
-                </a>
-                <img src="public/images/visit-day.svg" alt="A phone displaying the event schedule screen from the PhD Visit Day app prototype." />
-                <p>A web app prototype for prospective PhD students in the Information Science department to plan their schedule and explore their research area on Visit Day.</p>
-                <div class="tags row">
-                    <p class="tag">UX Research & Design</p>
-                    <p class="tag">Front-End Development</p>
-                </div>
+        <!-- <h2>Portfolio</h2> -->
+        <div class="project" id="visit-day">
+            <a href="portfolio/phd-visit-day.html">
+                <h3>Cornell Information Science Visit Day</h3>
+            </a>
+            <img src="public/images/visit-day.svg" alt="A phone displaying the event schedule screen from the PhD Visit Day app prototype." />
+            <p>A web app prototype for prospective PhD students in the Information Science department to plan their schedule and explore their research area on Visit Day.</p>
+            <div class="tags row">
+                <p class="tag">UX Research & Design</p>
+                <p class="tag">Front-End Development</p>
             </div>
-            <div class="project" id="umd-volunteers">
-                <a href="portfolio/umd-stadium-volunteers.html">
-                    <h3>Improving the UMD Athletics Stadium Volunteers' Experience</h3>
-                </a>
-                <img src="public/images/umd-stadium-volunteers/food-concessions.jpg"
-                    alt="A food concessions stand inside a UMD stadium."
-                />
-                <p>Developed a conceptual app solution that improves the efficiency of the ordering process at concessions stands through an online system, following interview and survey research with stadium volunteers.</p>
-                <div class="tags row">
-                    <p>UX Research</p>
-                </div>
+        </div>
+        <div class="project" id="umd-volunteers">
+            <a href="portfolio/umd-stadium-volunteers.html">
+                <h3>Improving the UMD Athletics Stadium Volunteers' Experience</h3>
+            </a>
+            <img src="public/images/umd-stadium-volunteers/food-concessions.jpg"
+                alt="A food concessions stand inside a UMD stadium."
+            />
+            <p>Developed a conceptual app solution that improves the efficiency of the ordering process at concessions stands through an online system, following interview and survey research with stadium volunteers.</p>
+            <div class="tags row">
+                <p>UX Research</p>
             </div>
-            <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
-            <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
         </div>
 
-        <div class="row">
-            <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
-            <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
-            <div class="project" id="meteorite">
-                <a href="https://caroherrera24.github.io/inst-630-final/">
-                    <h3>Meteorite Landings</h3>
-                </a>
-                <img src="public/images/meteorite-landings.png" alt="A stillshot from a meteorite landing aniamtion. The meteorite is flying through space towards Earth, moving over the Arctic Circle." />
-                <p>An 3D visualization of meteorites landing on Earth over the years, allowing users to learn about science in an interactive way.</p>
-                <div class="tags row">
-                    <p>UI Design</p>
-                    <p>Front-End Development</p>
-                </div>
+        <div class="project" id="meteorite">
+            <a href="https://caroherrera24.github.io/inst-630-final/" target="_blank">
+                <h3>Meteorite Landings</h3>
+            </a>
+            <img src="public/images/meteorite-landings.png" alt="A stillshot from a meteorite landing aniamtion. The meteorite is flying through space towards Earth, moving over the Arctic Circle." />
+            <p>An 3D visualization of meteorites landing on Earth over the years, allowing users to learn about science in an interactive way.</p>
+            <div class="tags row">
+                <p>UI Design</p>
+                <p>Front-End Development</p>
             </div>
+        </div>
 
-            <div class="project" id="iter">
-                <a href="https://www.figma.com/deck/cUbdhtUTFnieULGHqHDDTS">
-                    <h3>iter</h3>
-                </a>
-                <img src="public/images/iter.svg" alt="A phone displaying iter's homescreen which has a welcome message and an explore section." />
-                <p>A mobile travel planning app that nudges users to more ethical and sustainable choices while preparing for their next trip.</p>
-                <div class="tags row">
-                    <p>UX Research & Design</p>
-                </div>
+        <div class="project" id="iter">
+            <a href="https://www.figma.com/deck/cUbdhtUTFnieULGHqHDDTS" target="_blank">
+                <h3>iter</h3>
+            </a>
+            <img src="public/images/iter.svg" alt="A phone displaying iter's homescreen which has a welcome message and an explore section." />
+            <p>A mobile travel planning app that nudges users to more ethical and sustainable choices while preparing for their next trip.</p>
+            <div class="tags row">
+                <p>UX Research & Design</p>
             </div>
-            <img class="middle-cloud" src="public/images/white-cloud.svg" alt=""  />
-            <img class="cloud" src="public/images/white-cloud.svg" alt=""  />
         </div>
 
     </section>
@@ -114,10 +154,9 @@
         <h2>About</h2>
         <div class="row">
             <div id="about-text">
-                <p>I graduated from Cornell with a Bachelor’s degree in <span class="italics">Information Science</span> (Behavioral Science, Data Science, and UX), and I recently completed a Master’s degree in <span class="italics">Human-Computer Interaction</span> at UMD.</p>
-                <p>As an aspiring UX engineer with a love for <span class="italics">front-end development</span> and <span class="italics">data visualization</span>, I am fascinated by the design and technical aspects behind the user experience. By bridging the gap between the two, I design <span class="blue-highlight">user-centered</span> solutions while keeping technical constraints in mind and <span class="blue-highlight">collaborate effectively</span> with developers to smooth the implementation process.</p>
-                <p>I aim to improve <span class="blue-highlight">digital accessibility</span> through my work by sharing modern technology with as many people as possible, giving them the tools to solve <span class="blue-highlight">real world problems.</span></p>
-                <p>In my free time, you will find me reading, watching Korean dramas, or feeding my sourdough starter. ✌️</p>
+                <p>I graduated from Cornell with a Bachelor’s degree in <span class="">Information Science</span> (Behavioral Science, Data Science, and UX), and I recently completed a Master’s degree in <span class="">Human-Computer Interaction</span> at UMD.</p>
+                <p>As an aspiring UX engineer with a love for <span class="">front-end development</span> and <span class="">data visualization</span>, I am fascinated by the design and technical aspects behind the user experience. By bridging the gap between the two, I design <span class="">user-centered</span> solutions while keeping technical constraints in mind and <span class="">collaborate effectively</span> with developers to smooth the implementation process.</p>
+                <p>In my free time, you will find me reading, watching Korean dramas, or feeding my sourdough starter.</p>
             </div>
             <div class="photo-container">
                 <div class="row">
