@@ -11,8 +11,8 @@
     --yellow-tag: #FFEA80;
     --green-tag: #CFF089;
     --purple-tag: #D5BFFF;
-    --max-width: 1020px;
-    --nav-max-width: 1250px;
+    /* --max-width: 1020px;
+    --nav-max-width: 1250px; */
 }
 
 html {
@@ -25,16 +25,15 @@ html {
 }
 
 body {
-    width: 100%;
+    width: 90%;
     background-color: var(--background);
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 body > section, main > section {
-    width: 95%;
     margin: 0 auto;
     padding-top: 64px;
-    max-width: var(--max-width);
 }
 
 a {
@@ -53,13 +52,13 @@ a {
 }
 
 .top-section {
-    width: 100%;
-    max-width: unset;
+width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
 }
 
 /* header/navigation styling */
 header {
-    width: 100%;
     /* position: sticky; */
     top: -1px;
     background-color: var(--background);
@@ -72,10 +71,8 @@ header {
 nav {
     justify-content: space-between;
     align-items: center;
-    width: 80%;
     margin: auto;
     padding: 20px 0;
-    max-width: var(--nav-max-width);
 }
 
 #hamburger {
@@ -124,22 +121,18 @@ nav {
 }
 
 /* top white section */
-#white-section {
+#intro-section {
     /* background-color: white; */
     /* padding-top: 0; */
     padding-top: 45px;
     margin-top: revert;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 5%;
-}
-
-#white-section p {
-    padding: 16px 0;
+    gap: 10%;
 }
 
 .container {
-    max-width: var(--max-width);
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -384,17 +377,20 @@ i {
 }
 
 /* media queries */
+@media only screen and (min-width: 1800px) {
+    body {
+        width: 70%;
+    }
+
+    #intro-section div {
+        max-width: 50%;
+    }
+
+    .container {
+        width: 70%;
+    }
+}
 @media only screen and (max-width: 1014px) {
-    /* increase width of body content */
-
-    nav {
-        width: 90%;
-    }
-
-    #white-section {
-        width: revert;
-    }
-
     /* remove middle clouds from portfolio section */
     .middle-cloud {
         display: none;
@@ -426,7 +422,7 @@ i {
 
 }
 
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 812px) {
     /* navigation */
     nav div.row {
         width: 100%;
@@ -456,6 +452,11 @@ i {
 
     .hidden {
         display: none;
+    }
+
+    #intro-section {
+        flex-direction: column-reverse;
+        align-items: start;
     }
 
     #portfolio > .row, #about > .row, nav {
@@ -507,11 +508,16 @@ i {
     }
 
     /* top white section */
-    #white-section {
+    #intro-section {
         padding: 32px 0;
     }
 
-    #white-section p {
+    #intro-section svg{
+        width: 50%;
+        height: auto;
+    }
+
+    #intro-section p {
         padding-top: 3px;
         padding-bottom: 0;
     }
