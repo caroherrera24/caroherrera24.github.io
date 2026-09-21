@@ -34,7 +34,8 @@ body {
 
 body > section, main > section {
     margin: 0 auto;
-    padding-top: 64px;
+    margin-top: 40px;
+    padding-top: 5px;
 }
 
 a {
@@ -133,7 +134,7 @@ nav {
 }
 
 .container {
-    width: 80%;
+    width: 95%;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -147,7 +148,7 @@ nav {
 }
 
 .container h1 {
-    font-size: 34px;
+    /* font-size: 34px; */
     padding: 8.5px 0;
 }
 
@@ -180,7 +181,7 @@ nav {
 /* portfolio section */
 section h2 {
     padding-bottom: 20px;
-    font-size: 28px;
+    /* font-size: 28px; */
     margin: 0;
 }
 
@@ -213,7 +214,7 @@ section h2 {
 .project h3 {
     font-family: var(--h3-font);
     font-weight: bolder;
-    font-size: 24px;
+    font-size: 1.35em;
     margin: 16px 0;
 }
 
@@ -390,6 +391,18 @@ i {
 }
 
 @media only screen and (max-width: 812px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.35em;
+    }
+
+    .project h3 {
+        font-size: 1.2em;
+    }
+
     /* navigation */
     nav div.row {
         width: 100%;
@@ -444,6 +457,9 @@ i {
         align-self: center;
     }
 
+    .darkblue-section .container {
+        width: 92%;
+    }
 
 }
 
