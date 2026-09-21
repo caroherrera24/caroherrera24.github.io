@@ -25,7 +25,8 @@ html {
 }
 
 body {
-    width: 90%;
+    width: 95%;
+    max-width: 1100px;
     background-color: var(--background);
     margin: 0 auto;
     overflow-x: hidden;
@@ -52,9 +53,9 @@ a {
 }
 
 .top-section {
-width: 100vw;
-  position: relative;
-  left: calc(-50vw + 50%);
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
 }
 
 /* header/navigation styling */
@@ -132,7 +133,8 @@ nav {
 }
 
 .container {
-    width: 90%;
+    width: 80%;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -186,19 +188,19 @@ section h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1%;
-    margin-bottom: 38px;
+    gap: 24px;
     justify-content: space-between;
     position: relative;
 }
 
 .project {
     background-color: white;
+    box-sizing: border-box; 
     border: 3px solid black;
     border-radius: 6px;
-    padding: 22px;
-    flex: 1 0 44%;
-    margin-bottom: 1%;
+    padding: 24px;
+    flex: 1 0 calc(50% - 12px);
+            max-width: calc(50% - 12px);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -265,35 +267,8 @@ section h2 {
     background-color: var(--yellow-tag);
 }
 
-#cookieRun .tags p {
+#federal-pmp .tags p {
     background-color: var(--purple-tag);
-}
-
-.cloud, .middle-cloud {
-    z-index: 10;
-    position: absolute;
-}
-
-.middle-cloud {
-    top: 50%;
-}
-
-.cloud + .middle-cloud {
-    left: -150px;
-}
-
-.project + .middle-cloud {
-    right: -150px;
-}
-
-.cloud:first-child {
-    top: -25px;
-    left: -25px;
-}
-
-.cloud:last-child {
-    bottom: -25px;
-    right: -25px;
 }
 
 .project img, #name-tag, #headshot {
@@ -328,6 +303,7 @@ section h2 {
 
 .photo-container > .row {
     justify-content: flex-end;
+    margin-bottom: -20%;
 }
 
 #name-tag {
@@ -339,6 +315,10 @@ section h2 {
 #headshot {
     width: 70%;
     max-width: 350px;
+    /* clip-path: circle(35% at 45% 33%); */
+    clip-path: ellipse(45% 38% at 45% 40%);
+    object-fit: cover;
+    margin-top: -2%;
 }
 
 /* contact section */
@@ -377,25 +357,12 @@ i {
 }
 
 /* media queries */
-@media only screen and (min-width: 1800px) {
-    body {
-        width: 70%;
-    }
-
+@media only screen and (min-width: 2000px) {
     #intro-section div {
-        max-width: 50%;
-    }
-
-    .container {
-        width: 70%;
+        max-width: 70%;
     }
 }
 @media only screen and (max-width: 1014px) {
-    /* remove middle clouds from portfolio section */
-    .middle-cloud {
-        display: none;
-    }
-
     /* about section */
     .photo-container .row {
         display: flex;
@@ -455,20 +422,17 @@ i {
     }
 
     #intro-section {
-        flex-direction: column-reverse;
-        align-items: start;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #portfolio > .row, #about > .row, nav {
+    #portfolio, #about > .row, nav {
         flex-direction: column;
     }
 
     .project, #about-text, .photo-container {
         width: revert;
-    }
-
-    #cookieRun {
-        margin-right: unset;
+        max-width: unset;
     }
 
     #about-text {
